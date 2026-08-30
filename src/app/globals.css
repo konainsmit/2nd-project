@@ -219,6 +219,32 @@ main:not(.theme-light) .text-slate-400 { color: #64748B !important; }
 .auth-shell [class*="text-white"] { color: #0F172A !important; }
 .auth-shell [class*="text-slate-400"], .auth-shell [class*="text-slate-500"] { color: #64748B !important; }
 
+/* Light-mode control polish: keep actions crisp and remove the residual gold treatment. */
+.theme-light button.bg-cyan-300:not([class*="w-full"]) {
+  background-color: #4F46E5 !important;
+  color: #FFFFFF !important;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(99,102,241,.20) !important;
+}
+.theme-light button.bg-cyan-300:not([class*="w-full"]):hover { background-color: #4338CA !important; }
+.theme-light .demo-button,
+.theme-light .secondary-button,
+.theme-light button[class*="bg-slate-900/80"] {
+  background-color: #FFFFFF !important;
+  color: #334155 !important;
+  border-color: #E2E8F0 !important;
+  font-weight: 500;
+}
+.theme-light .demo-button:hover,
+.theme-light .secondary-button:hover,
+.theme-light button[class*="bg-slate-900/80"]:hover { background-color: #F8FAFC !important; border-color: #CBD5E1 !important; }
+.theme-light .demo-button.active { background-color: #EEF2FF !important; border-color: #C7D2FE !important; color: #4338CA !important; }
+.theme-light .roi-card { background-color: #FFFFFF !important; border-color: #E2E8F0 !important; box-shadow: 0 1px 2px rgba(15,23,42,.05) !important; }
+.theme-light .roi-card .roi-detail { color: #64748B !important; }
+.theme-light .job-card { background-color: #FFFFFF !important; border-color: #E2E8F0 !important; box-shadow: 0 1px 2px rgba(15,23,42,.05) !important; }
+.theme-light .job-card input { background-color: rgba(248,250,252,.5) !important; border-color: #E2E8F0 !important; color: #0F172A !important; }
+.theme-light .job-card input:focus { background-color: #FFFFFF !important; border-color: #6366F1 !important; box-shadow: 0 0 0 1px #6366F1 !important; }
+
 /* Hide Next.js error overlay portal */
 nextjs-portal {
   display: none !important;
