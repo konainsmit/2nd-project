@@ -245,6 +245,29 @@ main:not(.theme-light) .text-slate-400 { color: #64748B !important; }
 .theme-light .job-card input { background-color: rgba(248,250,252,.5) !important; border-color: #E2E8F0 !important; color: #0F172A !important; }
 .theme-light .job-card input:focus { background-color: #FFFFFF !important; border-color: #6366F1 !important; box-shadow: 0 0 0 1px #6366F1 !important; }
 
+/* Refined light theme: ink, sapphire, and cool silver. Keeps every label readable. */
+.theme-light { background-color: #F8FAFC !important; color: #0F172A !important; }
+.theme-light .text-cyan-300, .theme-light .text-cyan-200,
+.theme-light .text-indigo-300, .theme-light .text-indigo-200,
+.theme-light .text-indigo-400 { color: #1D4ED8 !important; }
+.theme-light .bg-cyan-300, .theme-light .bg-indigo-500 { background-color: #1D4ED8 !important; color: #FFFFFF !important; }
+.theme-light .hover\:bg-cyan-200:hover, .theme-light .hover\:bg-indigo-400:hover { background-color: #1E40AF !important; }
+.theme-light .bg-cyan-400\/10, .theme-light .bg-indigo-500\/15 { background-color: #EFF6FF !important; }
+.theme-light .border-cyan-400\/30, .theme-light .border-cyan-400\/25,
+.theme-light .border-cyan-400\/20, .theme-light .border-cyan-400\/15,
+.theme-light .border-indigo-400\/40 { border-color: #BFDBFE !important; }
+.theme-light .text-slate-500, .theme-light .text-slate-600 { color: #64748B !important; }
+.theme-light .text-slate-200, .theme-light .text-slate-300,
+.theme-light .text-slate-400 { color: #334155 !important; }
+.theme-light .text-white { color: #0F172A !important; }
+.theme-light .active { background-color: #EFF6FF !important; border-color: #BFDBFE !important; color: #1E40AF !important; }
+.theme-light .theme-light input, .theme-light input::placeholder { color: #64748B; }
+.theme-light [class*="bg-emerald-400/10"] { background-color: #ECFDF5 !important; }
+.theme-light [class*="border-emerald-400"] { border-color: #A7F3D0 !important; }
+.theme-light .text-emerald-300, .theme-light .text-emerald-400 { color: #047857 !important; }
+.theme-light .text-amber-300 { color: #B45309 !important; }
+.theme-light .text-rose-300 { color: #B91C1C !important; }
+
 /* Hide Next.js error overlay portal */
 nextjs-portal {
   display: none !important;
