@@ -6,7 +6,7 @@ import {
   ChevronRight, CircleHelp, Clock3, FileText, Filter, Github, Globe2,
   Info, Layers3, Link2, Mail, MoreHorizontal, Paperclip, Play, Plus,
   Search, Send, Settings2, ShieldCheck, SlidersHorizontal, Sparkles,
-  Terminal, UploadCloud, Users, X, Zap
+  Sun, Moon, Terminal, UploadCloud, Users, X, Zap
 } from "lucide-react";
 
 type Status = "shortlisted" | "review" | "rejected" | "scheduled";
@@ -39,6 +39,7 @@ export default function Home() {
   const [rejectCutoff, setRejectCutoff] = useState(50);
   const [role, setRole] = useState("Senior Full-Stack Developer");
   const [dragging, setDragging] = useState(false);
+  const [theme, setTheme] = useState<"dark" | "light">("dark");
   const selected = candidates.find((c) => c.id === selectedId) ?? candidates[0];
   const shown = useMemo(() => candidates.filter(c => (filter === "all" || c.status === filter) && (c.name + c.role + c.matched.join(" ")).toLowerCase().includes(query.toLowerCase())).sort((a,b) => sort === "score" ? b.score-a.score : sort === "experience" ? b.years-a.years : a.id-b.id), [candidates, filter, query, sort]);
 
@@ -47,12 +48,12 @@ export default function Home() {
   const schedule = () => { setCandidates(cs => cs.map(c => c.id === selected.id ? { ...c, status: "scheduled" } : c)); setInviteOpen(false); notify(`Invite dispatched to ${selected.name}`); };
   const action = (message: string) => notify(`${message} · ${selected.name}`);
 
-  return <main className="min-h-screen bg-[#080a0f] text-slate-200 selection:bg-cyan-400/20">
+  return <main className={`min-h-screen bg-[#080a0f] text-slate-200 selection:bg-cyan-400/20 ${theme === "light" ? "theme-light" : ""}`}>
     <div className="fixed inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_30%_-10%,rgba(14,116,144,.14),transparent_45%),radial-gradient(ellipse_at_95%_40%,rgba(30,64,175,.08),transparent_35%)]" />
     <header className="relative z-10 h-16 border-b border-slate-800/80 bg-slate-950/85 backdrop-blur-xl flex items-center px-5 gap-7">
       <div className="flex items-center gap-2.5 min-w-[218px]"><div className="relative grid place-items-center h-8 w-8 rounded-lg bg-gradient-to-br from-cyan-300 via-blue-500 to-violet-600 shadow-[0_0_22px_rgba(34,211,238,.28)]"><Sparkles size={16} className="text-white" /><span className="absolute -right-1 -top-1 h-2 w-2 rounded-full bg-emerald-300 ring-2 ring-slate-950" /></div><div><div className="text-sm font-semibold tracking-tight text-white">TalentPulse <span className="text-cyan-300">AI</span></div><div className="text-[9px] uppercase tracking-[.18em] text-slate-500">Screening agent</div></div></div>
       <div className="hidden lg:flex items-center gap-2 rounded-full border border-emerald-400/20 bg-emerald-400/[.06] px-3 py-1.5 text-[11px] text-emerald-300"><span className="h-1.5 w-1.5 rounded-full bg-emerald-300 shadow-[0_0_8px_#6ee7b7]" /> Agent Engine: Online <span className="text-slate-600">|</span> Latency: 18ms <span className="text-slate-600">|</span> Model: GPT-4o Vision & Parsing</div>
-      <div className="ml-auto flex items-center gap-3"><button onClick={() => setLogsOpen(true)} className="relative rounded-lg p-2 text-slate-400 hover:bg-slate-800 hover:text-white transition"><Bell size={17}/><span className="absolute right-1.5 top-1.5 h-1.5 w-1.5 rounded-full bg-cyan-300" /></button><div className="hidden sm:flex items-center gap-2 border-l border-slate-800 pl-4"><div className="grid h-7 w-7 place-items-center rounded-full bg-gradient-to-br from-pink-300 to-orange-400 text-[10px] font-bold text-slate-950">SJ</div><div className="text-xs"><div className="text-slate-200">Sarah Jenkins</div><div className="text-[10px] text-slate-500">HR Admin</div></div><ChevronDown size={13} className="text-slate-500" /></div></div>
+      <div className="ml-auto flex items-center gap-3"><button onClick={() => setTheme(theme === "dark" ? "light" : "dark")} aria-label={`Switch to ${theme === "dark" ? "day" : "night"} mode`} className="rounded-lg p-2 text-slate-400 hover:bg-slate-800 hover:text-white transition">{theme === "dark" ? <Sun size={17}/> : <Moon size={17}/>}</button><button onClick={() => setLogsOpen(true)} className="relative rounded-lg p-2 text-slate-400 hover:bg-slate-800 hover:text-white transition"><Bell size={17}/><span className="absolute right-1.5 top-1.5 h-1.5 w-1.5 rounded-full bg-cyan-300" /></button><div className="hidden sm:flex items-center gap-2 border-l border-slate-800 pl-4"><div className="grid h-7 w-7 place-items-center rounded-full bg-gradient-to-br from-pink-300 to-orange-400 text-[10px] font-bold text-slate-950">SJ</div><div className="text-xs"><div className="text-slate-200">Sarah Jenkins</div><div className="text-[10px] text-slate-500">HR Admin</div></div><ChevronDown size={13} className="text-slate-500" /></div></div>
     </header>
     <div className="relative z-10 flex border-b border-slate-800/70 bg-slate-950/40 px-5 h-12 items-center"><div className="flex items-center gap-2 text-xs text-slate-500"><span>Workspace</span><ChevronRight size={13}/><span>Requisitions</span><ChevronRight size={13}/><div className="relative flex items-center"><select value={role} onChange={e=>{setRole(e.target.value);notify(`Requisition switched to ${e.target.value}`)}} className="appearance-none bg-transparent pr-5 text-slate-200 outline-none"><option>Senior Full-Stack Developer</option><option>Lead UX Designer</option><option>Data Platform Engineer</option></select><ChevronDown size={13} className="pointer-events-none absolute right-0"/></div></div><div className="ml-auto hidden md:flex items-center gap-4 text-[11px] text-slate-500"><span className="flex items-center gap-1.5"><Activity size={13} className="text-cyan-400"/> Last sync 2m ago</span><button className="flex items-center gap-1.5 hover:text-slate-200" onClick={() => notify("Opening agent settings")}><Settings2 size={13}/> Settings</button></div></div>
 

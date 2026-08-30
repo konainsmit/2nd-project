@@ -137,6 +137,28 @@ html {
 
 input[type="range"] { height: 5px; cursor: pointer; }
 
+/* The dashboard keeps its compact visual language in both modes while
+   shifting the surfaces and type for bright-workspace use. */
+.theme-light {
+  background: #f4f7fb !important;
+  color: #172033 !important;
+}
+.theme-light .bg-slate-950,
+.theme-light [class*="bg-[#080a0f]"] { background-color: #f4f7fb !important; }
+.theme-light [class*="bg-slate-900"] { background-color: rgba(255,255,255,.86) !important; }
+.theme-light [class*="bg-slate-950/"],
+.theme-light [class*="bg-slate-900/"] { background-color: rgba(255,255,255,.72) !important; }
+.theme-light [class*="border-slate-800"],
+.theme-light [class*="border-slate-700"] { border-color: #dbe3ef !important; }
+.theme-light [class*="text-white"] { color: #172033 !important; }
+.theme-light [class*="text-slate-200"],
+.theme-light [class*="text-slate-300"] { color: #334155 !important; }
+.theme-light [class*="text-slate-400"],
+.theme-light [class*="text-slate-500"] { color: #64748b !important; }
+.theme-light [class*="text-slate-600"] { color: #94a3b8 !important; }
+.theme-light header { background-color: rgba(255,255,255,.84) !important; }
+.theme-light .shadow-2xl { box-shadow: 0 20px 60px rgba(30,41,59,.18) !important; }
+
 /* Hide Next.js error overlay portal */
 nextjs-portal {
   display: none !important;
