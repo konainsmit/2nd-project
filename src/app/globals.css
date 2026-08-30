@@ -297,6 +297,14 @@ main:not(.theme-light) .text-slate-400 { color: #64748B !important; }
 .auth-shell .hover\:bg-indigo-400:hover { background-color: #115E59 !important; }
 .auth-shell .from-indigo-400 { --tw-gradient-from: #0F766E var(--tw-gradient-from-position) !important; }
 .auth-shell .to-violet-700 { --tw-gradient-to: #164E63 var(--tw-gradient-to-position) !important; }
+.auth-shell input[type="password"] {
+  background-color: #FFFFFF !important;
+  color: #17212B !important;
+  -webkit-text-fill-color: #17212B !important;
+  caret-color: #0F766E !important;
+  color-scheme: light;
+}
+.auth-shell input[type="password"]::placeholder { color: #94A3B8 !important; -webkit-text-fill-color: #94A3B8 !important; }
 
 /* Hide Next.js error overlay portal */
 nextjs-portal {
