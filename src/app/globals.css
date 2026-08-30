@@ -118,12 +118,12 @@
   }
   body {
     @apply bg-background text-foreground;
-    background: #080a0f;
+    background: #090D16;
   }
 }
 
 html {
-  background: #080a0f;
+  background: #090D16;
 }
 
 ::selection {
@@ -131,7 +131,7 @@ html {
 }
 
 ::-webkit-scrollbar { width: 8px; height: 8px; }
-::-webkit-scrollbar-track { background: #080a0f; }
+::-webkit-scrollbar-track { background: #090D16; }
 ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 999px; }
 ::-webkit-scrollbar-thumb:hover { background: #334155; }
 
@@ -144,7 +144,7 @@ input[type="range"] { height: 5px; cursor: pointer; }
   color: #172033 !important;
 }
 .theme-light .bg-slate-950,
-.theme-light [class*="bg-[#080a0f]"] { background-color: #f4f7fb !important; }
+.theme-light [class*="bg-[#090D16]"] { background-color: #FAFAFA !important; }
 .theme-light [class*="bg-slate-900"] { background-color: rgba(255,255,255,.86) !important; }
 .theme-light [class*="bg-slate-950/"],
 .theme-light [class*="bg-slate-900/"] { background-color: rgba(255,255,255,.72) !important; }
@@ -158,6 +158,14 @@ input[type="range"] { height: 5px; cursor: pointer; }
 .theme-light [class*="text-slate-600"] { color: #94a3b8 !important; }
 .theme-light header { background-color: rgba(255,255,255,.84) !important; }
 .theme-light .shadow-2xl { box-shadow: 0 20px 60px rgba(30,41,59,.18) !important; }
+
+/* Brand token overrides keep existing interaction states on the indigo system. */
+.text-cyan-300, .text-cyan-200 { color: #818cf8 !important; }
+.bg-cyan-300 { background-color: #6366F1 !important; }
+.bg-cyan-400\/10 { background-color: rgba(99,102,241,.10) !important; }
+.border-cyan-400\/30, .border-cyan-400\/25, .border-cyan-400\/20, .border-cyan-400\/15 { border-color: rgba(99,102,241,.30) !important; }
+.border-t-cyan-300 { border-top-color: #818cf8 !important; }
+.accent-cyan-300 { accent-color: #6366F1 !important; }
 
 /* Hide Next.js error overlay portal */
 nextjs-portal {
