@@ -118,8 +118,24 @@
   }
   body {
     @apply bg-background text-foreground;
+    background: #080a0f;
   }
 }
+
+html {
+  background: #080a0f;
+}
+
+::selection {
+  background: rgba(103, 232, 249, 0.22);
+}
+
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: #080a0f; }
+::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 999px; }
+::-webkit-scrollbar-thumb:hover { background: #334155; }
+
+input[type="range"] { height: 5px; cursor: pointer; }
 
 /* Hide Next.js error overlay portal */
 nextjs-portal {
