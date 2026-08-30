@@ -179,6 +179,16 @@ main:not(.theme-light) .text-emerald-400 { color: #10B981 !important; }
 main:not(.theme-light) .text-blue-400 { color: #3B82F6 !important; }
 main:not(.theme-light) .text-slate-400 { color: #64748B !important; }
 
+.auth-shell { background-color: #090D16 !important; }
+.auth-shell [class*="bg-slate-900"] { background-color: #111827 !important; }
+.auth-shell [class*="border-slate-800"],
+.auth-shell [class*="border-slate-700"] { border-color: #1E293B !important; }
+.auth-shell .text-indigo-300,
+.auth-shell .text-indigo-400 { color: #6366F1 !important; }
+.auth-shell .bg-indigo-500 { background-color: #6366F1 !important; }
+.auth-shell .hover\:bg-indigo-400:hover { background-color: #4F46E5 !important; }
+.auth-shell .border-indigo-400 { border-color: #6366F1 !important; }
+
 /* Hide Next.js error overlay portal */
 nextjs-portal {
   display: none !important;
