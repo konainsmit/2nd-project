@@ -54,7 +54,7 @@ function Dashboard({ user }: { user: User }) {
   const [rejectCutoff, setRejectCutoff] = useState(50);
   const [role, setRole] = useState("Senior Full-Stack Developer");
   const [dragging, setDragging] = useState(false);
-  const [theme, setTheme] = useState<"dark" | "light">("dark");
+  const [theme, setTheme] = useState<"dark" | "light">("light");
   const [observability, setObservability] = useState(false);
   const [thoughtOpen, setThoughtOpen] = useState(true);
   const [demoMode, setDemoMode] = useState("Full-Stack batch");

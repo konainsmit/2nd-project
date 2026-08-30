@@ -140,24 +140,24 @@ input[type="range"] { height: 5px; cursor: pointer; }
 /* The dashboard keeps its compact visual language in both modes while
    shifting the surfaces and type for bright-workspace use. */
 .theme-light {
-  background: #f4f7fb !important;
-  color: #172033 !important;
+  background: #F8FAFC !important;
+  color: #0F172A !important;
 }
 .theme-light .bg-slate-950,
-.theme-light [class*="bg-[#090D16]"] { background-color: #FAFAFA !important; }
-.theme-light [class*="bg-slate-900"] { background-color: rgba(255,255,255,.86) !important; }
+.theme-light [class*="bg-[#090D16]"] { background-color: #F8FAFC !important; }
+.theme-light [class*="bg-slate-900"] { background-color: #FFFFFF !important; }
 .theme-light [class*="bg-slate-950/"],
-.theme-light [class*="bg-slate-900/"] { background-color: rgba(255,255,255,.72) !important; }
+.theme-light [class*="bg-slate-900/"] { background-color: #FFFFFF !important; }
 .theme-light [class*="border-slate-800"],
-.theme-light [class*="border-slate-700"] { border-color: #dbe3ef !important; }
-.theme-light [class*="text-white"] { color: #172033 !important; }
+.theme-light [class*="border-slate-700"] { border-color: #E2E8F0 !important; }
+.theme-light [class*="text-white"] { color: #0F172A !important; }
 .theme-light [class*="text-slate-200"],
-.theme-light [class*="text-slate-300"] { color: #334155 !important; }
+.theme-light [class*="text-slate-300"] { color: #0F172A !important; }
 .theme-light [class*="text-slate-400"],
 .theme-light [class*="text-slate-500"] { color: #64748b !important; }
 .theme-light [class*="text-slate-600"] { color: #94a3b8 !important; }
-.theme-light header { background-color: rgba(255,255,255,.84) !important; }
-.theme-light .shadow-2xl { box-shadow: 0 20px 60px rgba(30,41,59,.18) !important; }
+.theme-light header { background-color: rgba(255,255,255,.92) !important; }
+.theme-light .shadow-2xl, .theme-light .glass { box-shadow: 0 10px 30px rgba(15,23,42,.06) !important; }
 
 main:not(.theme-light) { background-color: #0B1220 !important; }
 .theme-light { background-color: #FAFAFA !important; }
@@ -198,6 +198,26 @@ main:not(.theme-light) .text-slate-400 { color: #64748B !important; }
 .auth-shell select { background-color: #121A28 !important; border-color: #263247 !important; }
 .auth-shell input:focus,
 .auth-shell select:focus { border-color: #C9A66B !important; box-shadow: 0 0 0 3px rgba(201,166,107,.14); }
+
+/* Bright workspace palette for the default day mode and auth screen. */
+.theme-light .text-cyan-300, .theme-light .text-cyan-200,
+.theme-light .text-indigo-300, .theme-light .text-indigo-200 { color: #2563EB !important; }
+.theme-light .bg-cyan-300, .theme-light .bg-indigo-500 { background-color: #2563EB !important; color: #FFFFFF !important; }
+.theme-light .bg-cyan-400\/10, .theme-light .bg-indigo-500\/15 { background-color: rgba(37,99,235,.10) !important; }
+.theme-light .border-cyan-400\/30, .theme-light .border-cyan-400\/25, .theme-light .border-cyan-400\/20, .theme-light .border-cyan-400\/15, .theme-light .border-indigo-400\/40 { border-color: rgba(37,99,235,.30) !important; }
+.auth-shell { background: #F8FAFC !important; color: #0F172A !important; }
+.auth-shell section:first-child { background: #F8FAFC !important; border-color: #E2E8F0 !important; }
+.auth-shell section:first-child > div:first-child { background: #F8FAFC !important; }
+.auth-shell [class*="bg-white/[.04]"] { background: #FFFFFF !important; border-color: #E2E8F0 !important; box-shadow: 0 10px 30px rgba(15,23,42,.06); }
+.auth-shell .text-indigo-300, .auth-shell .text-indigo-400 { color: #2563EB !important; }
+.auth-shell .bg-indigo-500 { background-color: #2563EB !important; color: #FFFFFF !important; }
+.auth-shell .hover\:bg-indigo-400:hover { background-color: #1D4ED8 !important; }
+.auth-shell .border-indigo-400 { border-color: #2563EB !important; }
+.auth-shell .from-indigo-400 { --tw-gradient-from: #2563EB var(--tw-gradient-from-position) !important; }
+.auth-shell .to-violet-700 { --tw-gradient-to: #1D4ED8 var(--tw-gradient-to-position) !important; }
+.auth-shell input, .auth-shell select { background-color: #FFFFFF !important; border-color: #E2E8F0 !important; color: #0F172A !important; }
+.auth-shell [class*="text-white"] { color: #0F172A !important; }
+.auth-shell [class*="text-slate-400"], .auth-shell [class*="text-slate-500"] { color: #64748B !important; }
 
 /* Hide Next.js error overlay portal */
 nextjs-portal {
