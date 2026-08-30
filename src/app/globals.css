@@ -310,6 +310,8 @@ main:not(.theme-light) .text-slate-400 { color: #64748B !important; }
   color-scheme: light;
 }
 .auth-shell input[type="password"]::placeholder { color: #94A3B8 !important; -webkit-text-fill-color: #94A3B8 !important; }
+.command-label { color: #1E3A8A !important; }
+.command-label > span { background-color: #2563EB !important; }
 
 /* Hide Next.js error overlay portal */
 nextjs-portal {
