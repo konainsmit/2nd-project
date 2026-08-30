@@ -159,42 +159,45 @@ input[type="range"] { height: 5px; cursor: pointer; }
 .theme-light header { background-color: rgba(255,255,255,.84) !important; }
 .theme-light .shadow-2xl { box-shadow: 0 20px 60px rgba(30,41,59,.18) !important; }
 
-main:not(.theme-light) { background-color: #090D16 !important; }
+main:not(.theme-light) { background-color: #0B1220 !important; }
 .theme-light { background-color: #FAFAFA !important; }
 
-/* Brand token overrides keep existing interaction states on the indigo system. */
-.text-cyan-300, .text-cyan-200 { color: #818cf8 !important; }
-.bg-cyan-300 { background-color: #6366F1 !important; }
-.bg-cyan-400\/10 { background-color: rgba(99,102,241,.10) !important; }
-.border-cyan-400\/30, .border-cyan-400\/25, .border-cyan-400\/20, .border-cyan-400\/15 { border-color: rgba(99,102,241,.30) !important; }
-.border-t-cyan-300 { border-top-color: #818cf8 !important; }
-.accent-cyan-300 { accent-color: #6366F1 !important; }
+/* A restrained midnight navy and champagne-gold system replaces the louder neon treatment. */
+.text-cyan-300, .text-cyan-200, .text-indigo-300, .text-indigo-200 { color: #C9A66B !important; }
+.bg-cyan-300, .bg-indigo-500 { background-color: #C9A66B !important; color: #0B1220 !important; }
+.bg-cyan-400\/10, .bg-indigo-500\/15 { background-color: rgba(201,166,107,.12) !important; }
+.border-cyan-400\/30, .border-cyan-400\/25, .border-cyan-400\/20, .border-cyan-400\/15, .border-indigo-400\/40 { border-color: rgba(201,166,107,.38) !important; }
+.border-t-cyan-300 { border-top-color: #C9A66B !important; }
+.accent-cyan-300 { accent-color: #C9A66B !important; }
+.hover\:bg-cyan-200:hover, .hover\:bg-indigo-400:hover { background-color: #A9824B !important; }
+.from-cyan-300 { --tw-gradient-from: #C9A66B var(--tw-gradient-from-position) !important; }
+.via-blue-500 { --tw-gradient-via: #6B8CAD var(--tw-gradient-via-position) !important; }
+.to-violet-600 { --tw-gradient-to: #A9824B var(--tw-gradient-to-position) !important; }
 
 /* Exact dashboard palette: these intentionally win over Tailwind's slate scale. */
-main:not(.theme-light) [class*="bg-slate-900"] { background-color: #111827 !important; }
-main:not(.theme-light) [class*="bg-slate-950"] { background-color: #090D16 !important; }
+main:not(.theme-light) [class*="bg-slate-900"] { background-color: #121A28 !important; }
+main:not(.theme-light) [class*="bg-slate-950"] { background-color: #0B1220 !important; }
 main:not(.theme-light) [class*="border-slate-800"],
-main:not(.theme-light) [class*="border-slate-700"] { border-color: #1E293B !important; }
+main:not(.theme-light) [class*="border-slate-700"] { border-color: #263247 !important; }
 main:not(.theme-light) .text-emerald-400 { color: #10B981 !important; }
 main:not(.theme-light) .text-blue-400 { color: #3B82F6 !important; }
 main:not(.theme-light) .text-slate-400 { color: #64748B !important; }
 
-.auth-shell { background-color: #090D16 !important; }
-.auth-shell [class*="bg-slate-900"] { background-color: #111827 !important; }
+.auth-shell { background-color: #0B1220 !important; }
+.auth-shell [class*="bg-slate-900"] { background-color: #121A28 !important; }
 .auth-shell [class*="border-slate-800"],
-.auth-shell [class*="border-slate-700"] { border-color: #1E293B !important; }
+.auth-shell [class*="border-slate-700"] { border-color: #263247 !important; }
 .auth-shell .text-indigo-300,
-.auth-shell .text-indigo-400 { color: #6366F1 !important; }
-.auth-shell .bg-indigo-500 { background-color: #6366F1 !important; }
-.auth-shell .hover\:bg-indigo-400:hover { background-color: #4F46E5 !important; }
-.auth-shell .border-indigo-400 { border-color: #6366F1 !important; }
-.auth-shell .from-indigo-400 { --tw-gradient-from: #6366F1 var(--tw-gradient-from-position) !important; }
-.auth-shell .to-violet-700 { --tw-gradient-to: #4F46E5 var(--tw-gradient-to-position) !important; }
-.auth-shell .bg-indigo-500 { background-color: #6366F1 !important; }
+.auth-shell .text-indigo-400 { color: #C9A66B !important; }
+.auth-shell .bg-indigo-500 { background-color: #C9A66B !important; color: #0B1220 !important; }
+.auth-shell .hover\:bg-indigo-400:hover { background-color: #A9824B !important; }
+.auth-shell .border-indigo-400 { border-color: #C9A66B !important; }
+.auth-shell .from-indigo-400 { --tw-gradient-from: #C9A66B var(--tw-gradient-from-position) !important; }
+.auth-shell .to-violet-700 { --tw-gradient-to: #A9824B var(--tw-gradient-to-position) !important; }
 .auth-shell input,
-.auth-shell select { background-color: #111827 !important; border-color: #1E293B !important; }
+.auth-shell select { background-color: #121A28 !important; border-color: #263247 !important; }
 .auth-shell input:focus,
-.auth-shell select:focus { border-color: #6366F1 !important; box-shadow: 0 0 0 3px rgba(99,102,241,.14); }
+.auth-shell select:focus { border-color: #C9A66B !important; box-shadow: 0 0 0 3px rgba(201,166,107,.14); }
 
 /* Hide Next.js error overlay portal */
 nextjs-portal {
