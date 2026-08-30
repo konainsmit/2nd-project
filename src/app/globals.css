@@ -268,6 +268,36 @@ main:not(.theme-light) .text-slate-400 { color: #64748B !important; }
 .theme-light .text-amber-300 { color: #B45309 !important; }
 .theme-light .text-rose-300 { color: #B91C1C !important; }
 
+/* Final light-mode direction: quiet mineral neutrals with one refined teal accent. */
+.theme-light, .auth-shell { background-color: #F5F7F8 !important; color: #17212B !important; }
+.theme-light [class*="bg-slate-900"], .theme-light [class*="bg-slate-950"],
+.theme-light .roi-card, .theme-light .job-card { background-color: #FFFFFF !important; }
+.theme-light [class*="border-slate-800"], .theme-light [class*="border-slate-700"],
+.theme-light .roi-card, .theme-light .job-card { border-color: #D8E0E5 !important; }
+.theme-light .text-indigo-300, .theme-light .text-indigo-200, .theme-light .text-indigo-400,
+.theme-light .text-cyan-300, .theme-light .text-cyan-200 { color: #0F766E !important; }
+.theme-light button.bg-cyan-300:not([class*="w-full"]),
+.theme-light .bg-indigo-500 { background-color: #0F766E !important; color: #FFFFFF !important; }
+.theme-light button.bg-cyan-300:not([class*="w-full"]):hover,
+.theme-light .hover\:bg-indigo-400:hover { background-color: #115E59 !important; }
+.theme-light .demo-button.active, .theme-light .active { background-color: #E6FFFB !important; border-color: #99F6E4 !important; color: #115E59 !important; }
+.theme-light .demo-button, .theme-light .secondary-button,
+.theme-light button[class*="bg-slate-900/80"] { background-color: #FFFFFF !important; color: #334155 !important; border-color: #D8E0E5 !important; }
+.theme-light .demo-button:hover, .theme-light .secondary-button:hover,
+.theme-light button[class*="bg-slate-900/80"]:hover { background-color: #F8FAFC !important; border-color: #B8C4CC !important; }
+.theme-light .text-emerald-300, .theme-light .text-emerald-400 { color: #15803D !important; }
+.theme-light .text-slate-200, .theme-light .text-slate-300 { color: #334155 !important; }
+.theme-light .text-slate-400, .theme-light .text-slate-500, .theme-light .text-slate-600 { color: #64748B !important; }
+.theme-light .from-cyan-300 { --tw-gradient-from: #0F766E var(--tw-gradient-from-position) !important; }
+.theme-light .via-blue-500 { --tw-gradient-via: #334155 var(--tw-gradient-via-position) !important; }
+.theme-light .to-violet-600 { --tw-gradient-to: #164E63 var(--tw-gradient-to-position) !important; }
+.theme-light input, .theme-light select { color: #17212B !important; }
+.auth-shell .text-indigo-300, .auth-shell .text-indigo-400 { color: #0F766E !important; }
+.auth-shell .bg-indigo-500 { background-color: #0F766E !important; color: #FFFFFF !important; }
+.auth-shell .hover\:bg-indigo-400:hover { background-color: #115E59 !important; }
+.auth-shell .from-indigo-400 { --tw-gradient-from: #0F766E var(--tw-gradient-from-position) !important; }
+.auth-shell .to-violet-700 { --tw-gradient-to: #164E63 var(--tw-gradient-to-position) !important; }
+
 /* Hide Next.js error overlay portal */
 nextjs-portal {
   display: none !important;
