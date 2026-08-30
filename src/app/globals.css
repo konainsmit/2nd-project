@@ -159,6 +159,9 @@ input[type="range"] { height: 5px; cursor: pointer; }
 .theme-light header { background-color: rgba(255,255,255,.84) !important; }
 .theme-light .shadow-2xl { box-shadow: 0 20px 60px rgba(30,41,59,.18) !important; }
 
+main:not(.theme-light) { background-color: #090D16 !important; }
+.theme-light { background-color: #FAFAFA !important; }
+
 /* Brand token overrides keep existing interaction states on the indigo system. */
 .text-cyan-300, .text-cyan-200 { color: #818cf8 !important; }
 .bg-cyan-300 { background-color: #6366F1 !important; }
@@ -166,6 +169,15 @@ input[type="range"] { height: 5px; cursor: pointer; }
 .border-cyan-400\/30, .border-cyan-400\/25, .border-cyan-400\/20, .border-cyan-400\/15 { border-color: rgba(99,102,241,.30) !important; }
 .border-t-cyan-300 { border-top-color: #818cf8 !important; }
 .accent-cyan-300 { accent-color: #6366F1 !important; }
+
+/* Exact dashboard palette: these intentionally win over Tailwind's slate scale. */
+main:not(.theme-light) [class*="bg-slate-900"] { background-color: #111827 !important; }
+main:not(.theme-light) [class*="bg-slate-950"] { background-color: #090D16 !important; }
+main:not(.theme-light) [class*="border-slate-800"],
+main:not(.theme-light) [class*="border-slate-700"] { border-color: #1E293B !important; }
+main:not(.theme-light) .text-emerald-400 { color: #10B981 !important; }
+main:not(.theme-light) .text-blue-400 { color: #3B82F6 !important; }
+main:not(.theme-light) .text-slate-400 { color: #64748B !important; }
 
 /* Hide Next.js error overlay portal */
 nextjs-portal {
